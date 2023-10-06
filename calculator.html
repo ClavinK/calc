@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Calculator</title>
+    </head>
+    <body>
+        <script src="scripts.js"></script>
+        <div id="border">
+            <p class='nums'></p>
+
+            <p class='space'>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('7');
+                ">7</button>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('8');
+                ">8</button>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('9');
+                ">9</button>
+                <button id="butt" type="button" onclick="
+                    upCalc(' + ');
+                ">+</button>
+            </p>
+            <p>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('4');
+                ">4</button>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('5');
+                ">5</button>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('6');
+                ">6</button>
+                <button id="butt" type="button" onclick="
+                    upCalc(' - ');
+                ">-</button>
+            </p>
+            <p>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('1');
+                ">1</button>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('2');
+                ">2</button>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('3');
+                ">3</button>
+                <button id="butt" type="button" onclick="
+                    upCalc(' * ');
+                ">x</button>
+            </p>
+            <p>
+               <button id="buttc" type="button" onclick="
+                    calculation = '';
+                    displayCalc();
+                    localStorage.setItem('calculation', calculation);
+                ">C</button>
+                <button id="buttnum" type="button" onclick="
+                    upCalc('0');
+                ">0</button>
+                <button id="butt" type="button" onclick="
+                    const myArray = calculation.split(' ');
+                    let operator = myArray[1];
+                    if (operator === '+') {
+                        calculation = Number(myArray[0]) + Number(myArray[2]);
+                    } else if (operator === '-') {
+                        calculation = Number(myArray[0]) - Number(myArray[2]);
+                    } else if (operator === '*') {
+                        calculation = Number(myArray[0]) * Number(myArray[2]);
+                    } else if (operator === '/') {
+                        calculation = Number(myArray[0]) / Number(myArray[2]);
+                    }
+                    displayCalc();
+                    localStorage.setItem('calculation', calculation);
+                ">=</button>
+                <button id="butt" type="button" onclick="
+                    upCalc(' / ');
+                ">/</button>
+            </p>
+        </div>
+    </body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer><i>Created by: Calvin Kamada <br>© 2023 All Rights Reserved</i></footer>
+</html>
